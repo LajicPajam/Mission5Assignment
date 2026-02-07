@@ -1,0 +1,84 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  font-family: "Georgia", "Times New Roman", serif;
+  background: radial-gradient(circle at top left, #f7f4ff 0%, #f4f7fb 45%, #f0f4f8 100%);
+  color: #1b1f33;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.site-nav {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem 0 2rem;
+}
+
+.hero-images {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-images img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 16px 30px rgba(20, 30, 60, 0.18);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: #5f6a89;
+  margin-bottom: 0.5rem;
+}
+
+.details {
+  padding: 2rem 0 3rem;
+}
+
+.calculator {
+  padding: 1.5rem 0 3rem;
+}
+
+.calculator-card {
+  border-radius: 18px;
+  border: none;
+  background: #ffffff;
+}
+
+.site-footer {
+  background: rgba(255, 255, 255, 0.9);
+}
