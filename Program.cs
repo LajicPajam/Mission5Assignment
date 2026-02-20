@@ -1,23 +1,24 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Register MVC so controllers can render Razor views.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
+    // In production, show a friendly error page and enforce HTTPS.
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
+// Core middleware pipeline for routing and auth.
 app.UseHttpsRedirection();
 app.UseRouting();
 
 app.UseAuthorization();
 
+// Serve static files and map the default route (Home/Index).
 app.MapStaticAssets();
 
 app.MapControllerRoute(
